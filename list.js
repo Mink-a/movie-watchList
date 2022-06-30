@@ -12,19 +12,22 @@ function render() {
       '<button class="remove">remove</button>'
     );
   });
+
   container.innerHTML = remove.join('');
 }
+
+// Render localStorage items
 render();
 
-document.querySelectorAll('.remove').forEach((item) => {
-  item.addEventListener('click', (e) => {
-    let movie = e.target.parentNode.parentNode;
-    let movieID = movie.childNodes[1].textContent;
-    localStorage.removeItem(movieID);
-    render();
+// IIFEs
+(() => {
+  document.querySelectorAll('.remove').forEach((item) => {
+    item.addEventListener('click', (e) => {
+      let movie = e.target.parentNode.parentNode;
+      let movieID = movie.childNodes[1].textContent;
+      localStorage.removeItem(movieID);
 
-    // console.log('helo');
+      location.reload();
+    });
   });
-});
-
-// console.log(render());
+})();
