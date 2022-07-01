@@ -135,6 +135,9 @@ main {
 
 .info h3 {
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .info p {
@@ -171,4 +174,16 @@ main {
 .add:active,
 .remove:active {
   transform: scale(0.9);
+}
+
+.rating {
+  font-size: small;
+  font-weight: 400;
+}
+
+.explore {
+  font-size: 2rem;
+  color: #aaa;
+  font-weight: bold;
+  margin-top: 100px;
 }
