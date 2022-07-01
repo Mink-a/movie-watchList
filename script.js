@@ -9,6 +9,7 @@ function render() {
     .then((res) => res.json())
     .then((data) => {
       cardArr = data.Search;
+      
 
       cardArr.forEach((item) => {
         cardContainer.innerHTML += `
@@ -25,6 +26,10 @@ function render() {
       </div>
       <div class="info">
         <h3 class="title">${item.Title}</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          cum nisi dicta!
+        </p>
         <button class="add">Add</button>
       </div>
     </div>
